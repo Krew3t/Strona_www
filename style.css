@@ -1,28 +1,10 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
     background-color: #22221e; 
     color: #f4f4f4;
     font-family: 'Segoe UI', Tahoma, sans-serif;
-    line-height: 1.5;
 }
-
-.blok-artykulu {
-    width: 100%;
-    margin-bottom: 50px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #444; 
-}
-
-.blok-artykulu:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.grupa-czyszczaca::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 
 .naglowek {
     background-color: #3e4a36; 
@@ -35,7 +17,6 @@ body {
     font-size: 55px;
     color: #c5a059;
     text-transform: uppercase;
-    margin-bottom: 5px;
 }
 
 .sekcja-glowna {
@@ -45,33 +26,56 @@ body {
     padding: 30px;
     background-color: #2a2a26;
     border: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    gap: 50px; 
 }
 
-.obrazek-lewo {
-    float: left;
-    width: 45%;
+p{
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-.obrazek-lewo img {
+.blok-artykulu {
+    display: flex;
+    gap: 5%;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #444; 
+}
+
+.blok-artykulu:last-child { border-bottom: none; }
+
+.kontener-obrazka {
+    flex: 45%; 
+}
+
+.kontener-obrazka img {
     width: 100%;
-    height: auto; 
-    max-height: 300px;
-    object-fit: cover; 
     border-radius: 5px;
 }
 
-.tekst-prawo {
-    float: left;
-    width: 50%;
-    margin-left: 5%;
+.tekst-artykulu {
+    flex: 50%; 
 }
 
-.tekst-prawo h2 {
+.tekst-artykulu h2 {
     color: #c5a059;
     font-size: 30px;
     margin-bottom: 20px;
 }
 
+.przycisk {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #c5a059; 
+    color: #111;              
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    align-self: flex-end; 
+}
 
 .pasek-info {
     background-color: #c5a059;
@@ -80,80 +84,50 @@ body {
     padding: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .stopka {
     background-color: #181816;
-    padding: 50px 0px;
+    color: #f4f4f4;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 20px;
 }
 
 .kolumna-stopki {
-    float:left;
-    box-sizing: border-box;
-    padding: 0 20px;
-    height: 226px;
+    flex: 1;
+    min-width: 250px;
 }
-
-.lewa {
-    width: 25%;
+.logo-kolumna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mapa-kolumna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-kolumna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.ikony-social a img {
+    width: 40px;
+    transition: transform 0.3s ease;
+}   
+.ikony-social a img:hover {
+    transform: scale(1.2);
+}
+.kontakt-dane {
     text-align: center;
-    padding-top: 2%;
+    font-size: 16px;
 }
-
-.prawa{
-    width: 25%;
-    padding-top: 1%;
-    padding-left: 2%;
-    text-align: center;
-    font-size: large;
-}
-
-.srodek {
-    width: 50%;
-    text-align: center;
-}
-
-.logo-mini {
-    width: 300px; 
-    margin-bottom: 15px;
-    margin: 25px 0;
-}
-
-.ikony-social img {
-    width: 70px;
-    margin: 20px 20px 20px 0;
-    cursor: pointer;
-}
-
-.srodekstopka iframe {
-    border: 2px solid #3e4a36;
-    border-radius: 4px;
-}
-
-a[href^="tel:"], a[href^="mailto:"] {
-    font-size: 14px;        
-    text-decoration: none;  
-    line-height: 1.2; 
-    color: white;     
-}
-
-a.przycisk {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #c5a059; 
-    color: #111;              
+.kontakt-dane a {
+    color: #c5a059;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 4px; 
-    float: right;              
 }
-
-a.przycisk:hover {
-    background-color: #e2b86a;
-    color: #000;
-}
-
-
-
