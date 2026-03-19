@@ -19,6 +19,22 @@ body {
     text-transform: uppercase;
 }
 
+.nawigacja {
+    background-color:#c5a059; 
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0;
+    width: 100vw;
+}
+
+.nawigacja a {
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
 .sekcja-glowna {
     width: 90%;
     max-width: 1200px;
@@ -93,6 +109,7 @@ p{
     flex-wrap: wrap;
     padding: 30px;
     gap: 20px;
+    flex-direction: row;
 }
 
 .kolumna-stopki {
@@ -110,13 +127,14 @@ p{
     align-items: center;
 }
 .social-kolumna {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center; 
+  gap: 20px;
 }
 .ikony-social a img {
-    width: 40px;
+    width: 80px;
     transition: transform 0.3s ease;
 }   
 .ikony-social a img:hover {
